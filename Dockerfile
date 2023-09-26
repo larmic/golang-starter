@@ -6,6 +6,10 @@ FROM golang:1.21 AS builder
 LABEL stage=intermediate
 RUN go version
 
+RUN apt-get update -y; \
+    apt-get install -y --no-cache ca-certificates; \
+    update-ca-certificates;
+
 WORKDIR /go/src/larmic/
 
 COPY main.go go.mod go.sum /go/src/larmic/
@@ -52,6 +56,7 @@ RUN if [ "$TARGETPLATFORM" = "linux/amd64" ] ; then \
 # Step 2: create minimal executable image (less than 10 MB)
 FROM scratch
 WORKDIR /root/
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=builder /go/src/larmic/main .
 COPY --from=builder /go/src/larmic/open-api-3.yaml .
 
