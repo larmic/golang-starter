@@ -13,7 +13,8 @@ The ultimate goal is to achieve fully automated creation of a compact Docker ima
 transfer to Docker Hub.
 
 // TODO Requirements
-// TODO Used technologies (renovate, ...)
+// TODO Used technologies (renovate, gin, ...)
 // TODO system view as image?
+// TODO structure oriented on https://github.com/golang-standards/project-layout
 // TODO how to fork (hub credentials, ...)
 // TODO example requests
