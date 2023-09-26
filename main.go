@@ -10,6 +10,7 @@ func main() {
 	log.Println("Hello golang starter!")
 
 	externalUrl := os.Getenv("EXTERNAL_URL")
+	log.Println("env:	EXTERNAL_URL=", externalUrl)
 
 	if externalUrl == "" {
 		log.Fatal("Environment variable EXTERNAL_URL is not set!")

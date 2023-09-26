@@ -2,6 +2,7 @@ CONTAINER_NAME=larmic-golang-starter-example
 IMAGE_NAME=larmic/golang-starter-example
 IMAGE_TAG=latest
 
+# external url that will be called by /api/external
 EXTERNAL_URL=https://catfact.ninja/fact
 
 help: ## Outputs this help screen
