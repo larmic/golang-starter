@@ -1,0 +1,15 @@
+openapi: 3.1.0
+
+info:
+  title: Sonnen charger API
+  version: ${VERSION}
+  contact:
+    name: Lars Michaelis
+    email: mail@larmic.de
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+
+paths:
+
+#TODO
