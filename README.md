@@ -14,6 +14,7 @@ transfer to Docker Hub.
 
 // TODO Requirements  
 // TODO Used technologies (renovate, gin, ...)  
+// TODO explain VERSION, open-api-3.yaml, dockerfile
 // TODO system view as image?  
 // TODO structure oriented on https://github.com/golang-standards/project-layout  
 // TODO how to fork (hub credentials, ...)  
