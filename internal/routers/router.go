@@ -2,7 +2,7 @@ package routers
 
 import (
 	"github.com/gin-gonic/gin"
-	"larmic/golang-starter/internal/handlers"
+	"larmic/golang-starter/internal/routers/handlers"
 )
 
 func InitRouter(externalUrl string) *gin.Engine {
