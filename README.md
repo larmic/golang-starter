@@ -12,9 +12,9 @@ and [GitHub Actions](https://github.com/features/actions) can work seamlessly to
 The ultimate goal is to achieve fully automated creation of a compact Docker image and its versioned 
 transfer to Docker Hub.
 
-// TODO Requirements
-// TODO Used technologies (renovate, gin, ...)
-// TODO system view as image?
-// TODO structure oriented on https://github.com/golang-standards/project-layout
-// TODO how to fork (hub credentials, ...)
-// TODO example requests
+// TODO Requirements  
+// TODO Used technologies (renovate, gin, ...)  
+// TODO system view as image?  
+// TODO structure oriented on https://github.com/golang-standards/project-layout  
+// TODO how to fork (hub credentials, ...)  
+// TODO example requests  
