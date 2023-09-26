@@ -1,11 +1,12 @@
 openapi: 3.1.0
 
 info:
-  title: Sonnen charger API
+  title: larmic golang starter API
   version: ${VERSION}
   contact:
     name: Lars Michaelis
     email: mail@larmic.de
+    url: https://larmic.de
   license:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0
