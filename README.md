@@ -6,6 +6,7 @@
 [![Docker hub image](https://img.shields.io/docker/image-size/larmic/golang-starter-example?label=dockerhub)](https://hub.docker.com/repository/docker/larmic/golang-starter-example)
 ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/larmic/golang-starter-example)
 
+## Overview
 This serves as a straightforward example illustrating how 
 [Go](https://go.dev/), [Docker](https://www.docker.com/), [dockerhub](https://hub.docker.com/) 
 and [GitHub Actions](https://github.com/features/actions) can work seamlessly together. 
@@ -19,3 +20,5 @@ transfer to Docker Hub.
 // TODO structure oriented on https://github.com/golang-standards/project-layout  
 // TODO how to fork (hub credentials, ...)  
 // TODO example requests  
+// TODO open-api-3.yaml is not working on running without docker container
+// TODO write some tests?
