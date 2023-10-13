@@ -20,5 +20,4 @@ transfer to Docker Hub.
 // TODO structure oriented on https://github.com/golang-standards/project-layout  
 // TODO how to fork (hub credentials, ...)  
 // TODO example requests  
-// TODO open-api-3.yaml is not working on running without docker container
 // TODO write some tests?

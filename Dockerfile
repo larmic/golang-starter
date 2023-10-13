@@ -14,7 +14,7 @@ WORKDIR /go/src/larmic/
 
 COPY main.go go.mod go.sum /go/src/larmic/
 COPY internal /go/src/larmic/internal
-COPY api/open-api-3.yaml /go/src/larmic
+COPY api /go/src/larmic/api
 
 RUN go mod download
 
@@ -33,7 +33,7 @@ ARG VERSION
 RUN echo "I am running on $BUILDPLATFORM, building $VERSION for $TARGETPLATFORM"
 
 # set version in open-api-3.yaml
-RUN sed -i "s/\${VERSION}/$VERSION/" open-api-3.yaml
+RUN sed -i "s/\${VERSION}/$VERSION/" api/open-api-3.yaml
 
 RUN if [ "$TARGETPLATFORM" = "linux/arm/v7" ] ; then \
         echo "I am building linux/arm/v7 with CGO_ENABLED=0 GOARCH=arm GOARM=7" ; \
@@ -58,7 +58,6 @@ FROM scratch
 WORKDIR /root/
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=builder /go/src/larmic/main .
-COPY --from=builder /go/src/larmic/open-api-3.yaml .
 
 EXPOSE 8080
 ENTRYPOINT ["./main"]
