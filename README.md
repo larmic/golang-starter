@@ -12,7 +12,7 @@ This serves as a straightforward example illustrating how [Go](https://go.dev/),
 The ultimate goal is to achieve fully automated creation of a compact Docker image and its versioned 
 transfer to Docker Hub.
 
-### TODOs
+## TODOs
 there are still some open TODOs
 * explain VERSION, open-api-3.yaml, dockerfile
 * system view as image?  
