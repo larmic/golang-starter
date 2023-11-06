@@ -12,14 +12,14 @@ This serves as a straightforward example illustrating how [Go](https://go.dev/),
 The ultimate goal is to achieve fully automated creation of a compact Docker image and its versioned 
 transfer to Docker Hub.
 
-## TODOs
+## open TODOs
 there are still some open TODOs
-* explain VERSION, open-api-3.yaml, dockerfile
+* explain Pipeline, VERSION, open-api-3.yaml, dockerfile
 * system view as image?  
 * structure oriented on https://github.com/golang-standards/project-layout  
 * how to fork (github credentials, ...)  
 * example requests  
-* write some tests?
+* write some tests? (disclaimer? this project should only demonstrate how github and docker integration is working together)
 
 ## Used technologies
 * [Go programming language](https://go.dev/)
