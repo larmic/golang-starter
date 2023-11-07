@@ -27,7 +27,7 @@ there are still some open TODOs
 * [Docker](https://www.docker.com/) as application container
 * [Docker Hub](https://hub.docker.com/) as container registry
 * [GitHub Actions](https://github.com/features/actions) to automate CD/CD workflows (build docker application, push to registry,...)
-* [Renovate](renovate.json) for the automatic update of dependencies 
+* [Renovate](renovate.json) for automatic dependency updates 
 
 ## Requirements
 * [Local Go installation](https://go.dev/doc/install) to build and run application without using docker for local debugging
