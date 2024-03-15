@@ -14,6 +14,8 @@ transfer to Docker Hub.
 
 ## open TODOs
 there are still some open TODOs
+* retry os.getEnv(...) i.e. when environment variable changed
+* change context path (when overriding it using ingress controller, service returns 404)
 * explain Pipeline, VERSION, open-api-3.yaml, dockerfile
 * system view as image?  
 * structure oriented on https://github.com/golang-standards/project-layout  
