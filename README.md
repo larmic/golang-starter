@@ -19,7 +19,6 @@ there are still some open TODOs
 * structure oriented on https://github.com/golang-standards/project-layout  
 * how to fork (github credentials, ...)  
 * example requests  
-* write some tests? (disclaimer? this project should only demonstrate how github and docker integration is working together)
 
 ## Used technologies
 * [Go programming language](https://go.dev/)
@@ -54,3 +53,8 @@ The resultant Docker image contains only the bare necessities to run the Go appl
 small and efficient. It demonstrates the multilayered nature of Docker and how well-thought-out Dockerfiles can
 contribute to making containerization as efficient as possible.
 
+### Where are the unit tests?
+
+This is a simple illustration that shows the interaction between [Go](https://go.dev/), [Docker](https://www.docker.com/), [Docker Hub](https://hub.docker.com/) and 
+[GitHub Actions](https://github.com/features/actions). Although the Dockerfile contains a phase that executes the 
+(non-existent) tests, tests were omitted for the demo due to time constraints.
