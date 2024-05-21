@@ -15,7 +15,7 @@ transfer to Docker Hub.
 ## open TODOs
 there are still some open TODOs
 * change context path (when overriding it using ingress controller, service returns 404)
-* explain Pipeline, VERSION, open-api-3.yaml, dockerfile
+* explain Pipeline, VERSION, open-api-3.yaml
 * system view as image?  
 * structure oriented on https://github.com/golang-standards/project-layout  
 * how to fork (github credentials, ...)  
@@ -35,3 +35,23 @@ there are still some open TODOs
 * [Local Docker installation](https://docs.docker.com/engine/install/) to build docker container from local machine
 * [Docker Hub account](https://hub.docker.com/signup) for automatically container upload to registry
 * [Installed Renovate GitHub App](https://github.com/apps/renovate) to support automatically dependency updates
+
+## In-depth explanation
+
+### Dockerfile
+
+The [Dockerfile](Dockerfile) outlines a two-stage process to build a Go application.
+
+In the first phase, it creates a so-called "Builder" container based on a predefined Golang image. All of the files that
+comprise the Go project are copied into this container. Following that, all necessary dependencies are downloaded, tests
+are run, and finally the application is compiled. Special attention is paid to adjusting the build to cater to different
+hardware and operating system configurations.
+
+In the second phase, a minimal executable Docker image is produced. The compiled application from the "Builder"
+container is copied into a new Docker image, its base being an empty ('scratch') image, alongside associated
+certificates. The entry point for the container is set to be the compiled application.
+
+The resultant Docker image contains only the bare necessities to run the Go application and is therefore particularly
+small and efficient. It demonstrates the multilayered nature of Docker and how well-thought-out Dockerfiles can
+contribute to making containerization as efficient as possible.
+
