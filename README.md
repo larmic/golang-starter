@@ -36,6 +36,15 @@ there are still some open TODOs
 
 ## In-depth explanation
 
+### How to use this example
+
+TODO
+
+* Fork
+* GitHub Credentials (for docker hub)
+* Renovate
+* change image name in GitHub actions
+
 ### Dockerfile
 
 The [Dockerfile](Dockerfile) outlines a two-stage process to build a Go application.
@@ -52,6 +61,10 @@ certificates. The entry point for the container is set to be the compiled applic
 The resultant Docker image contains only the bare necessities to run the Go application and is therefore particularly
 small and efficient. It demonstrates the multilayered nature of Docker and how well-thought-out Dockerfiles can
 contribute to making containerization as efficient as possible.
+
+### Pipeline
+
+TODO
 
 ### Where are the unit tests?
 
