@@ -10,7 +10,7 @@ env:
 
 # cancel jobs in current pr if new commit is done
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  group: `${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}`
   cancel-in-progress: true
 
 jobs:
