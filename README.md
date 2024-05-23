@@ -67,9 +67,10 @@ contribute to making containerization as efficient as possible.
 [GitHub Actions](https://github.com/features/actions) is used to automate two workflows:
 
 1. [go-build.yml](.github/workflows/go-build.yml) 
-   is using a plain [Go](https://go.dev/) workflow to build and test this application in a fast way
+   is using a plain [Go](https://go.dev/) workflow to build and test this application in a fast way.
 2. [docker-build-and-push.yml](.gitignore/workflows/docker-build-and-push.yml)
-   is responsible for building the [Docker](https://www.docker.com/) image and pushing it to [Docker Hub](https://hub.docker.com/)
+   is responsible for building the [Docker](https://www.docker.com/) image and pushing it to [Docker Hub](https://hub.docker.com/).
+   Repository secrets _DOCKER_USERNAME_ and _DOCKER_PASSWORD_ are required as documented in Part [How to use this example](#how-to-use-this-example).
 
 ### Where are the unit tests?
 
