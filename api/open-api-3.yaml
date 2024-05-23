@@ -12,5 +12,27 @@ info:
     url: https://www.apache.org/licenses/LICENSE-2.0
 
 paths:
-
-#TODO
+  /api:
+    get:
+      summary: Retrieves the OpenAPI description as yaml
+      responses:
+        200:
+          description: Successful operation
+          content:
+            text/yaml:
+              schema:
+                type: string
+  /api/external:
+    get:
+      summary: Calls a configured external URL (in this example https://catfact.ninja/fact) and returns the response (a fact about cats) as JSON
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {
+                  fact: "A cat sees about 6 times better than a human at night, and needs 1/6 the amount of of light that a human does - it has a layer of extra reflecting cells which absorb light.",
+                  length: 172
+                }

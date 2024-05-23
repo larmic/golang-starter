@@ -14,7 +14,6 @@ transfer to Docker Hub.
 
 ## open TODOs
 there are still some open TODOs
-* explain Pipeline, VERSION, open-api-3.yaml
 * system view as image?  
 * structure oriented on https://github.com/golang-standards/project-layout  
 * how to fork (github credentials, ...)  
@@ -71,6 +70,8 @@ contribute to making containerization as efficient as possible.
 2. [docker-build-and-push.yml](.gitignore/workflows/docker-build-and-push.yml)
    is responsible for building the [Docker](https://www.docker.com/) image and pushing it to [Docker Hub](https://hub.docker.com/).
    Repository secrets _DOCKER_USERNAME_ and _DOCKER_PASSWORD_ are required as documented in Part [How to use this example](#how-to-use-this-example).
+
+TODO version replacement
 
 ### Where are the unit tests?
 
