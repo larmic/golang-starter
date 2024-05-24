@@ -16,7 +16,6 @@ transfer to Docker Hub.
 there are still some open TODOs
 * system view as image?  
 * structure oriented on https://github.com/golang-standards/project-layout  
-* how to fork (github credentials, ...)  
 * example requests  
 
 ## Used technologies
@@ -37,12 +36,32 @@ there are still some open TODOs
 
 ### How to use this example
 
-TODO
+#### Fork
 
-* Fork
-* GitHub Credentials (for docker hub)
-* Renovate
-* change image name in GitHub actions
+Fork this project to your own [GitHub](https://github.com/) space.
+
+#### Add Docker Hub credentials
+
+Add your personal [Docker Hub](https://hub.docker.com/) credentials to your repository.
+
+![docker_hub_credentials](assets/docker_hub_credentials.png)
+
+#### Change image name
+
+Change _IMAGE_NAME_ in [GitHub Actions](.github/workflows/docker-build-and-push.yml) to your specific name.
+
+#### Activate Renovate
+
+Activate [Renovate](renovate.json) in your [GitHub](https://github.com/) repository to support automatically dependency updates.
+You may have to adapt the file [renovate.json](renovate.json) to your own needs.
+
+#### Start with you own stuff
+
+The preparations have been completed. A separate Docker artifact is created for each commit. The version of the artifact
+is taken from the [VERSION file](VERSION). If you want to build a release, you simply have to adjust the number in the
+file.
+
+You can now start with your own stuff.
 
 ### Dockerfile
 
