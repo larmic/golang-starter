@@ -2,7 +2,7 @@
 # see: https://docs.docker.com/develop/develop-images/multistage-build/
 
 # Step 1: create multi stage builder (about 800 MB)
-FROM golang:1.22.6 AS builder
+FROM golang:1.23.0 AS builder
 LABEL stage=intermediate
 RUN go version
 
