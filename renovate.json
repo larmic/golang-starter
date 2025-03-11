@@ -12,9 +12,25 @@
     "labels": ["update"],
     "packageRules": [
         {
-            "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+            "matchManagers": ["gomod"],
+            "groupName": "Go Dependencies Updates",
             "automergeType": "branch",
             "automerge": true
+        },
+        {
+            "matchManagers": ["dockerfile"],
+            "groupName": "Docker Image Updates",
+            "automergeType": "pr",
+            "automerge": true,
+            "requiredStatusChecks": ["build"]
+        },
+        {
+            "matchManagers": ["github-actions"],
+            "groupName": "GitHub Actions Updates",
+            "automergeType": "pr",
+            "automerge": true,
+            "requiredStatusChecks": ["build"]
         }
     ]
+
 }

@@ -15,6 +15,7 @@ paths:
   /api:
     get:
       summary: Retrieves the OpenAPI description as yaml
+      description: Returns a YAML file containing the OpenAPI specification of this service.
       responses:
         200:
           description: Successful operation
@@ -27,12 +28,25 @@ paths:
       summary: Calls a configured external URL (in this example https://catfact.ninja/fact) and returns the response (a fact about cats) as JSON
       responses:
         200:
-          description: Successful operation
-          content:
-            application/json:
-              schema:
-                type: object
-                example: {
-                  fact: "A cat sees about 6 times better than a human at night, and needs 1/6 the amount of of light that a human does - it has a layer of extra reflecting cells which absorb light.",
-                  length: 172
-                }
+          $ref: '#/components/schemas/CatFact'
+
+components:
+  schemas:
+    CatFact:
+      type: object
+      properties:
+        fact:
+          type: string
+        length:
+          type: integer
+          format: int32
+      example: # Example for the schema
+        fact: "A cat sees about 6 times better than a human at night, and needs 1/6 the amount of light."
+        length: 123
+  responses:
+    CatFactResponse:
+      description: Successful operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CatFact'
