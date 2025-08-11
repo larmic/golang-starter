@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up version # will be read by Dockerfile to set version in open-api-3.yaml
         run: echo "VERSION=$(cat VERSION)" >> $GITHUB_ENV
